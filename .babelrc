@@ -1,0 +1,23 @@
+{
+  // pass options into loader itself
+  "presets": [["@babel/preset-env", {
+      "targets": [
+          "last 2 versions",
+          "not dead",
+          "not < 2%",
+          "not ie 11"
+      ],
+      "useBuiltIns": "entry"
+    }], 
+    "@babel/preset-react"],
+  "plugins": [
+    "@babel/plugin-syntax-dynamic-import",
+    "react-hot-loader/babel",
+    "@babel/plugin-proposal-class-properties"
+  ],
+  "env": {
+    "test": {
+      "plugins": ["dynamic-import-node"]
+    }
+  }
+}
